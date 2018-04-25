@@ -8,6 +8,12 @@ body{
   visibility: hidden;
 }
 
+.welcome-title{
+  color: #d22054;
+  font-family: 'Raleway';
+  text-align: center;
+}
+
 .dot {
   cursor: pointer;
 }
