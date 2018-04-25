@@ -1,0 +1,408 @@
+:root {
+  --line-length: 0;
+}
+body{
+  Background-color: #e4f0db;
+}
+.hidden {
+  visibility: hidden;
+}
+
+.dot {
+  cursor: pointer;
+}
+
+#ramona-cv-svg {
+  height: 100vh;
+  width: 100vw;
+}
+
+.line {
+  visibility: hidden;
+}
+
+.line.hide {
+  visibility: visible;
+  stroke-dashoffset: 0;
+}
+
+.line.hide.xshort {
+  stroke-dasharray: var(--line-xshort-length);
+  animation: animate-hide-xshort 0.2s linear forwards;
+}
+
+.line.hide.short {
+  stroke-dasharray: var(--line-short-length);
+  animation: animate-hide-short 0.2s linear forwards;
+}
+
+.line.hide.mid {
+  stroke-dasharray: var(--line-mid-length);
+  animation: animate-hide-mid 0.2s linear forwards;
+}
+
+.line.hide.long {
+  stroke-dasharray: var(--line-long-length);
+  animation: animate-hide-long 0.2s linear forwards;
+}
+
+.line.hide.xlong {
+  stroke-dasharray: var(--line-xlong-length);
+  animation: animate-hide-xlong 0.2s linear forwards;
+}
+
+.line.shown {
+  visibility: visible;
+  animation: animate-show 0.2s linear forwards;
+}
+
+.line.shown.xshort {
+  stroke-dasharray: var(--line-xshort-length);
+  stroke-dashoffset: var(--line-xshort-length);
+}
+
+.line.shown.short {
+  stroke-dasharray: var(--line-short-length);
+  stroke-dashoffset: var(--line-short-length);
+}
+
+.line.shown.mid {
+  stroke-dasharray: var(--line-mid-length);
+  stroke-dashoffset: var(--line-mid-length);
+}
+
+.line.shown.long {
+  stroke-dasharray: var(--line-long-length);
+  stroke-dashoffset: var(--line-long-length);
+}
+
+.line.shown.xlong {
+  stroke-dasharray: var(--line-xlong-length);
+  stroke-dashoffset: var(--line-xlong-length);
+}
+
+@keyframes animate-show {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes animate-hide-xshort {
+  to {
+    stroke-dashoffset: var(--line-xshort-length);
+  }
+}
+
+@keyframes animate-hide-short {
+  to {
+    stroke-dashoffset: var(--line-short-length);
+  }
+}
+
+@keyframes animate-hide-mid {
+  to {
+    stroke-dashoffset: var(--line-mid-length);
+  }
+}
+
+@keyframes animate-hide-long {
+  to {
+    stroke-dashoffset: var(--line-long-length);
+  }
+}
+
+@keyframes animate-hide-xlong {
+  to {
+    stroke-dashoffset: var(--line-xlong-length);
+  }
+}
+
+.eye-text {
+  width: 250px;
+  height: 400px;
+  color: #FF6C36;
+  text-align: right;
+  line-height: 1.5;
+}
+.container{
+  display: flex;
+  
+}
+.language-text{
+  width: 400px;
+  height: 200px;
+  color: rgb(54, 191, 255);
+  line-height: 0.8;
+  margin-top: -100px;
+  font-size: 23px;
+  margin-left: 20px;
+}
+
+.h3-language {
+  width:200px;
+}
+
+.programming-text{
+  width: 400px;
+  height: 200px;
+  color: rgb(54, 191, 255);
+  line-height: 0.8;
+  margin-top: -100px;
+  font-size: 23px;
+  margin-left: 50px;
+}
+
+.language-text >h3, .programming-text >h3 {
+  color: rgb(255, 191, 54);
+  line-height: 0.5;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+foreignObject {
+  font: 35px sans-serif;
+  font-family: 'Pacifico', cursive;
+  text-overflow: ellipsis;
+  text-align: left;
+  word-wrap: break-word;
+  height: 100px;
+  width: 100px;
+}
+
+.circle-chart__circle {
+  transition: stroke-dashoffset 1s;
+  stroke-dasharray: 250;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  -webkit-animation-play-state: running;  
+}
+
+.ai-circle {
+  stroke-dashoffset: 250;
+  -webkit-animation: show80 2s;
+  animation: show80 2s;
+}
+
+.ai-circle.animate {
+  stroke-dashoffset: 50;
+}
+
+.ps-circle {
+  stroke-dashoffset: 250;
+  -webkit-animation: show100 2s;
+  animation: show100 2s;
+}
+
+.ps-circle.animate {
+  stroke-dashoffset: 0;
+}
+
+.id-circle {
+  stroke-dashoffset: 250;
+  -webkit-animation: show75 2s;
+  animation: show75 2s;
+}
+
+.id-circle.animate {
+  stroke-dashoffset: 62;
+}
+
+.sk-circle {
+  stroke-dashoffset: 250;
+  -webkit-animation: show75 2s;
+  animation: show75 2s;
+}
+
+.sk-circle.animate {
+  stroke-dashoffset: 62;
+}
+
+@-webkit-keyframes show100 {
+  from {
+    stroke-dashoffset: 250;
+  }
+  
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes show100 {
+  from {
+    stroke-dashoffset: 250;
+  }
+  
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes show75 {
+  from {
+    stroke-dashoffset: 250;
+  }
+  
+  to {
+    stroke-dashoffset: 62;
+  }
+}
+
+@keyframes show75 {
+  from {
+    stroke-dashoffset: 250;
+  }
+  
+  to {
+    stroke-dashoffset: 62;
+  }
+}
+
+@-webkit-keyframes show50 {
+  from {
+    stroke-dashoffset: 250;
+  }
+  
+  to {
+    stroke-dashoffset: 125;
+  }
+}
+
+@keyframes show50 {
+  from {
+    stroke-dashoffset: 250;
+  }
+  
+  to {
+    stroke-dashoffset: 125;
+  }
+}
+
+@-webkit-keyframes show80 {
+  from {
+    stroke-dashoffset: 250;
+  }
+  
+  to {
+    stroke-dashoffset: 50;
+  }
+}
+
+@keyframes show80 {
+  from {
+    stroke-dashoffset: 250;
+  }
+  
+  to {
+    stroke-dashoffset: 50;
+  }
+}
+
+.circle-chart:hover .circle-chart__circle {
+  stroke-dashoffset: 250;
+  -webkit-animation-play-state: paused;
+}
+
+.circle-chart text {
+  font-family: 'Helvetica';
+}
+
+.education-title{
+  font-size: 35px;
+  color: rgb(240, 100, 50);
+}
+
+.portfolio-title{
+  font-size: 35px;
+  color: rgb(253, 187, 43);
+}
+
+.edu-title-1, .edu-title-2{
+  font-size: 17px;
+  font-family: 'Open sans';
+  line-height: 1.5;
+  color:#48ad80;
+}
+
+.edu-p-1, .edu-p-2{
+font-size:16px;
+font-family: 'Raleway';
+line-height: 1.5;
+color:#48ad80;
+}
+
+#education-box{
+  width:700px;
+  height:600px;
+  padding-left: 40px;
+  padding-right: 20px;
+}
+
+#portfolio-box{
+  width:300px;
+  height: 300px;
+}
+
+.link-a, .link-b{
+  list-style-type: none;
+  line-height: 1.5;
+  font-size:20px;
+  font-family: 'Raleway';
+  color: rgb(255, 174, 0);
+  text-decoration: none;
+}
+
+#experience-box{
+  width:1050px;
+  height:600px;
+  padding-right: 420px;
+}
+
+.exp-title {
+  font-size: 36px;
+  color: rgb(140, 8, 255);
+}
+
+.hobby-title{
+  font-size: 28px;
+  color: rgb(91, 68, 223);
+}
+
+.exp-title-1, .exp-title-2, .exp-title-3, .exp-title-4, .exp-title-5, .exp-title-6, .exp-title-7, .exp-title-8{
+  font-size: 17px;
+  font-family: 'Open sans';
+  line-height: 1.5;
+  color:#48ad80;
+
+}
+
+.exp-p-1, .exp-p-2, .exp-p-3, .exp-p-4, .exp-p-5, .exp-p-6, .exp-p-7, .exp-p-8 {
+  font-size:16px;
+  font-family: 'Raleway';
+  line-height: 1.5;
+  color:#48ad80;
+}
+
+ul{
+  margin-top: -20px;
+  margin-left: -40px;
+}
+
+#hobby-box{
+  width:150px;
+  height: 300px;
+}
+
+.list{
+  font-size: 18px;
+  font-family: 'Raleway';
+  line-height: 1.5;
+  color:#eb8500;
+  list-style-type: none;
+}
+
+.link-a:hover, .link-b:hover{
+  list-style-type: none;
+  color: rgb(226, 62, 21);
+  text-decoration: none;
+}
